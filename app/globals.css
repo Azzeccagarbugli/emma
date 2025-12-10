@@ -16,6 +16,12 @@
   --text-muted: #6B6B6B;
   --card-white: #FFFFFF;
   --shadow-color: rgba(0, 0, 0, 0.1);
+
+  /* Safe area insets for iOS */
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
 }
 
 @theme inline {
@@ -40,17 +46,25 @@
 
 html {
   -webkit-tap-highlight-color: transparent;
+  /* Ensure full height on iOS Safari */
+  height: 100%;
+  height: -webkit-fill-available;
 }
 
 body {
+  /* Full viewport background that extends behind status bars */
   background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+  background-attachment: fixed;
   color: var(--text-dark);
   font-family: "Nunito", system-ui, sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
+  min-height: -webkit-fill-available;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent overscroll bounce showing white background */
+  overscroll-behavior: none;
 }
 
 /* Smooth transitions for interactions */
@@ -226,6 +240,30 @@ a {
 /* Spring-like transition */
 .transition-spring {
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Safe area padding utilities */
+.safe-top {
+  padding-top: var(--safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+
+.safe-left {
+  padding-left: var(--safe-area-inset-left);
+}
+
+.safe-right {
+  padding-right: var(--safe-area-inset-right);
+}
+
+.safe-all {
+  padding-top: var(--safe-area-inset-top);
+  padding-bottom: var(--safe-area-inset-bottom);
+  padding-left: var(--safe-area-inset-left);
+  padding-right: var(--safe-area-inset-right);
 }
 
 /* Fix for iOS touch delay */

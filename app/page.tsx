@@ -6,7 +6,7 @@ import { faHeart, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 relative overflow-hidden">
+    <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 pt-[calc(3rem+env(safe-area-inset-top))] pb-[calc(3rem+env(safe-area-inset-bottom))] relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 bg-bumble/20 rounded-full blur-xl" />

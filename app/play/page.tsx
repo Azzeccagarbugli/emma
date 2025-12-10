@@ -83,7 +83,7 @@ export default function PlayPage() {
     const cardsSwiped = cardsData.cards.length - currentIndex - 1;
 
     return (
-        <main className="min-h-screen min-h-dvh flex flex-col items-center px-4 py-6 relative overflow-hidden">
+        <main className="min-h-screen min-h-dvh flex flex-col items-center px-4 py-6 pt-[calc(1.5rem+env(safe-area-inset-top))] pb-[calc(1.5rem+env(safe-area-inset-bottom))] relative overflow-hidden">
             {/* Confetti */}
             <ConfettiTrigger trigger={showConfetti} />
 
@@ -103,7 +103,6 @@ export default function PlayPage() {
                 <div className="relative w-full aspect-[3/4] max-h-[500px]">
                     {cardsData.cards.map((card, index) => {
                         // Only render cards that haven't been swiped yet
-                        // (cards at index <= currentIndex)
                         if (index > currentIndex) {
                             return null;
                         }
@@ -125,8 +124,8 @@ export default function PlayPage() {
                                 onSwipe={(dir) => swiped(dir, card as Card, index)}
                                 onCardLeftScreen={() => outOfFrame(index)}
                                 preventSwipe={['up', 'down']}
-                                swipeRequirementType="velocity"
-                                swipeThreshold={0.5}
+                                swipeRequirementType="position"
+                                swipeThreshold={50}
                                 className="absolute inset-0"
                             >
                                 <div
