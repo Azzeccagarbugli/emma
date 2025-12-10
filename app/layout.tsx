@@ -26,6 +26,25 @@ export const metadata: Metadata = {
       },
     ],
   },
+  openGraph: {
+    title: "Game of Emma 💛",
+    description: "A special game for our first date",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Game of Emma",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Game of Emma 💛",
+    description: "A special game for our first date",
+    images: ["/og-image.png"],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
