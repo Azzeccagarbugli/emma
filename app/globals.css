@@ -54,7 +54,8 @@ body {
 }
 
 /* Smooth transitions for interactions */
-button, a {
+button,
+a {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-tap-highlight-color: transparent;
 }
@@ -77,20 +78,26 @@ button, a {
 
 /* Float animation - smooth and gentle */
 @keyframes float {
-  0%, 100% { 
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
-  50% { 
+
+  50% {
     transform: translateY(-8px);
   }
 }
 
 /* Pulse glow for attention-grabbing elements */
 @keyframes pulse-glow {
-  0%, 100% { 
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(255, 198, 41, 0.3);
   }
-  50% { 
+
+  50% {
     box-shadow: 0 0 35px rgba(255, 198, 41, 0.5);
   }
 }
@@ -101,6 +108,7 @@ button, a {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -113,12 +121,15 @@ button, a {
     transform: scale(0.3);
     opacity: 0;
   }
+
   50% {
     transform: scale(1.08);
   }
+
   70% {
     transform: scale(0.95);
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -127,8 +138,15 @@ button, a {
 
 /* Gentle wiggle */
 @keyframes wiggle {
-  0%, 100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
+
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
 }
 
 /* Ping effect - slower and more subtle */
@@ -137,7 +155,9 @@ button, a {
     transform: scale(1);
     opacity: 0.4;
   }
-  75%, 100% {
+
+  75%,
+  100% {
     transform: scale(1.5);
     opacity: 0;
   }
@@ -210,7 +230,9 @@ button, a {
 
 /* Fix for iOS touch delay */
 @supports (-webkit-touch-callout: none) {
-  button, a {
+
+  button,
+  a {
     cursor: pointer;
   }
 }

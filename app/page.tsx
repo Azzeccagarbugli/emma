@@ -39,13 +39,13 @@ export default function Home() {
         <h1 className="text-5xl font-black text-text-dark mb-4 tracking-tight">
           Hey Emma!
         </h1>
-        
+
         <p className="text-xl text-text-muted font-semibold mb-2">
           I made something special for you...
         </p>
-        
+
         <p className="text-text-muted/80 text-base leading-relaxed">
-          Swipe through some cards and let&apos;s see how much we have in common! 
+          Swipe through some cards and let&apos;s see how much we have in common!
           <span className="inline-block ml-1">✨</span>
         </p>
       </div>
@@ -57,12 +57,12 @@ export default function Home() {
           className="group w-full bg-bumble hover:bg-bumble-dark text-text-dark font-bold text-xl py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 touch-target transition-all duration-200"
         >
           <span>Let&apos;s Play</span>
-          <FontAwesomeIcon 
-            icon={faArrowRight} 
-            className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" 
+          <FontAwesomeIcon
+            icon={faArrowRight}
+            className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
           />
         </Link>
-        
+
         <p className="text-center text-text-muted/60 text-sm mt-4">
           Made with 💛 for our first date
         </p>
