@@ -6,7 +6,6 @@ import TinderCard from 'react-tinder-card';
 import SwipeCard from '@/components/SwipeCard';
 import BottomSheet from '@/components/BottomSheet';
 import ConfettiTrigger from '@/components/ConfettiTrigger';
-import ProgressDots from '@/components/ProgressDots';
 import cardsData from '@/data/cards.json';
 import type { Card, SwipeDirection } from '@/types';
 
@@ -79,26 +78,12 @@ export default function PlayPage() {
         setShowMatch(false);
     }, []);
 
-    // Calculate progress (cards swiped)
-    const cardsSwiped = cardsData.cards.length - currentIndex - 1;
-
     return (
         <main className="min-h-screen min-h-dvh flex flex-col items-center px-4 py-6 relative overflow-hidden">
             {/* Confetti */}
             <ConfettiTrigger trigger={showConfetti} />
 
-            {/* Header */}
-            <div className="w-full max-w-md mb-4">
-                <div className="flex items-center justify-between mb-3">
-                    <h1 className="text-xl font-bold text-text-dark">Swipe Away! 💫</h1>
-                    <span className="text-sm font-semibold text-text-muted">
-                        {cardsSwiped}/{cardsData.cards.length}
-                    </span>
-                </div>
-                <ProgressDots total={cardsData.cards.length} current={cardsSwiped} />
-            </div>
-
-            {/* Card stack container */}
+            {/* Card stack container - takes up available space and centers cards */}
             <div className="flex-1 w-full max-w-md flex items-center justify-center relative">
                 <div className="relative w-full aspect-[3/4] max-h-[500px]">
                     {cardsData.cards.map((card, index) => {
@@ -158,35 +143,38 @@ export default function PlayPage() {
                 </div>
             </div>
 
-            {/* Swipe buttons */}
-            <div className="w-full max-w-md flex justify-center gap-8 mt-6 mb-4">
-                <button
-                    onClick={() => swipe('left')}
-                    disabled={!canSwipe}
-                    className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center text-coral hover:bg-coral hover:text-white transition-all duration-300 ease-out disabled:opacity-40 disabled:cursor-not-allowed touch-target active:scale-90 hover:scale-105 hover:shadow-xl"
-                    aria-label="Swipe left (Nope)"
-                >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+            {/* Bottom section - buttons stay at bottom */}
+            <div className="w-full max-w-md">
+                {/* Swipe buttons */}
+                <div className="flex justify-center gap-8 mb-4">
+                    <button
+                        onClick={() => swipe('left')}
+                        disabled={!canSwipe}
+                        className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center text-coral hover:bg-coral hover:text-white transition-all duration-300 ease-out disabled:opacity-40 disabled:cursor-not-allowed touch-target active:scale-90 hover:scale-105 hover:shadow-xl"
+                        aria-label="Swipe left (Nope)"
+                    >
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
 
-                <button
-                    onClick={() => swipe('right')}
-                    disabled={!canSwipe}
-                    className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center text-teal hover:bg-teal hover:text-white transition-all duration-300 ease-out disabled:opacity-40 disabled:cursor-not-allowed touch-target active:scale-90 hover:scale-105 hover:shadow-xl"
-                    aria-label="Swipe right (Yay)"
-                >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                </button>
+                    <button
+                        onClick={() => swipe('right')}
+                        disabled={!canSwipe}
+                        className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center text-teal hover:bg-teal hover:text-white transition-all duration-300 ease-out disabled:opacity-40 disabled:cursor-not-allowed touch-target active:scale-90 hover:scale-105 hover:shadow-xl"
+                        aria-label="Swipe right (Yay)"
+                    >
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Hint text */}
+                <p className="text-sm text-text-muted/60 text-center">
+                    Swipe or tap the buttons
+                </p>
             </div>
-
-            {/* Hint text */}
-            <p className="text-sm text-text-muted/60 text-center">
-                Swipe or tap the buttons
-            </p>
 
             {/* Match bottom sheet */}
             <BottomSheet

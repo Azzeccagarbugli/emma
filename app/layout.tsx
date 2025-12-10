@@ -10,8 +10,8 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Emma 💛",
-  description: "A special game for our first date",
+  title: "The Game of Emma",
+  description: "A funny game to check how much we have in common, I guess?",
   icons: {
     icon: [
       {
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Game of Emma 💛",
-    description: "A special game for our first date",
+    title: "The Game of Emma",
+    description: "A funny game to check how much we have in common, I guess?",
     images: [
       {
         url: "/og-image.png",
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Game of Emma 💛",
-    description: "A special game for our first date",
+    title: "The Game of Emma",
+    description: "A funny game to check how much we have in common, I guess?",
     images: ["/og-image.png"],
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Emma 💛",
+    title: "The Game of Emma",
   },
 };
 
