@@ -47,7 +47,6 @@ export default function SwipeCard({ card, isTop = false }: SwipeCardProps) {
         w-full h-full bg-card rounded-3xl
         flex flex-col items-center justify-center p-8
         border-4 border-white/50
-        will-change-transform
         ${isTop ? 'cursor-grab active:cursor-grabbing' : ''}
       `}
             style={{

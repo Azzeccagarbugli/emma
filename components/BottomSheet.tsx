@@ -56,9 +56,9 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
             className="fixed inset-0 z-50"
             onClick={handleBackdropClick}
         >
-            {/* Backdrop */}
+            {/* Backdrop - blur only */}
             <div
-                className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                className="absolute inset-0 backdrop-blur-md"
                 style={{
                     opacity: isAnimating ? 1 : 0,
                     transition: 'opacity 0.3s ease-out',
@@ -68,7 +68,7 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
             {/* Sheet container */}
             <div className="absolute inset-0 flex items-end justify-center p-4 pb-8">
                 <div
-                    className="relative w-full max-w-md bg-white rounded-3xl p-6 pt-4"
+                    className="relative w-full max-w-md bg-white rounded-3xl p-6 pt-6"
                     style={{
                         transform: isAnimating ? 'translateY(0) scale(1)' : 'translateY(100%) scale(0.95)',
                         opacity: isAnimating ? 1 : 0,
@@ -79,13 +79,10 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
                     }}
                     onClick={handleSheetClick}
                 >
-                    {/* Handle */}
-                    <div className="w-10 h-1 bg-gray-300 rounded-full mx-auto mb-5" />
-
                     {/* Close button */}
                     <button
                         onClick={onClose}
-                        className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-all duration-200 touch-target active:scale-95"
+                        className="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-all duration-200 touch-target active:scale-95"
                     >
                         <FontAwesomeIcon icon={faXmark} className="w-4 h-4 text-text-muted" />
                     </button>

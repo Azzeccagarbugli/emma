@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faRotateRight } from '@fortawesome/free-solid-svg-icons';
+import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState, Suspense } from 'react';
 import confetti from 'canvas-confetti';
 import cardsData from '@/data/cards.json';
@@ -80,26 +80,13 @@ function ConclusionContent() {
     const message = getMessage();
 
     return (
-        <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 relative overflow-hidden">
+        <main className="min-h-screen min-h-dvh flex flex-col items-center justify-center px-6 py-12 relative overflow-hidden">
             {/* Decorative background */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-10 left-8 w-32 h-32 bg-bumble/20 rounded-full blur-2xl" />
                 <div className="absolute top-32 right-4 w-24 h-24 bg-coral/20 rounded-full blur-xl" />
                 <div className="absolute bottom-32 left-12 w-28 h-28 bg-teal/20 rounded-full blur-xl" />
                 <div className="absolute bottom-16 right-16 w-20 h-20 bg-bumble/30 rounded-full blur-lg" />
-            </div>
-
-            {/* Top decoration */}
-            <div className="flex gap-3 justify-center">
-                {[...Array(5)].map((_, i) => (
-                    <span
-                        key={i}
-                        className="text-bumble animate-float"
-                        style={{ animationDelay: `${i * 0.2}s` }}
-                    >
-                        <FontAwesomeIcon icon={faHeart} className="w-5 h-5" />
-                    </span>
-                ))}
             </div>
 
             {/* Main content */}
@@ -129,7 +116,7 @@ function ConclusionContent() {
                 </p>
 
                 {/* Stats */}
-                <div className="flex items-center gap-6 bg-white/60 rounded-2xl px-6 py-4 shadow-sm">
+                <div className="flex items-center gap-6 bg-white/60 rounded-2xl px-6 py-4 shadow-sm mb-8">
                     <div className="text-center">
                         <p className="text-3xl font-black text-bumble">{matchCount}</p>
                         <p className="text-sm text-text-muted">Matches</p>
@@ -140,17 +127,17 @@ function ConclusionContent() {
                         <p className="text-sm text-text-muted">Cards</p>
                     </div>
                 </div>
-            </div>
 
-            {/* Bottom buttons */}
-            <div className="w-full max-w-sm z-10 space-y-3">
-                <Link
-                    href="/play"
-                    className="w-full bg-bumble hover:bg-bumble-dark text-text-dark font-bold text-xl py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 touch-target transition-all duration-200"
+                {/* Spotify Button - Main Action */}
+                <a
+                    href="https://open.spotify.com/track/0dTdxwwH6FYsJL0l3TgSe2?si=f02affe29cd14dd3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-[#1DB954] hover:bg-[#1ed760] text-white font-bold text-xl py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 touch-target transition-all duration-200 mb-3"
                 >
-                    <FontAwesomeIcon icon={faRotateRight} className="w-5 h-5" />
-                    <span>Play Again</span>
-                </Link>
+                    <FontAwesomeIcon icon={faSpotify} className="w-6 h-6" />
+                    <span>Listen Now</span>
+                </a>
 
                 <Link
                     href="/"
@@ -158,10 +145,6 @@ function ConclusionContent() {
                 >
                     <span>Back to Start</span>
                 </Link>
-
-                <p className="text-center text-text-muted/60 text-sm mt-4">
-                    Made with 💛 just for you, Emma
-                </p>
             </div>
         </main>
     );
