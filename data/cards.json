@@ -1,0 +1,78 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "icon": "pizza-slice",
+            "text": "Late night pizza runs at 2am",
+            "expectedSwipe": "right",
+            "matchMessage": "Same! I'm already hungry thinking about it 🍕"
+        },
+        {
+            "id": 2,
+            "icon": "couch",
+            "text": "Netflix marathons with zero guilt",
+            "expectedSwipe": "right",
+            "matchMessage": "Perfect match! What are we watching first? 🍿"
+        },
+        {
+            "id": 3,
+            "icon": "mountain-sun",
+            "text": "Spontaneous road trips to nowhere",
+            "expectedSwipe": "right",
+            "matchMessage": "Adventure awaits! Pack your bags! 🚗"
+        },
+        {
+            "id": 4,
+            "icon": "mug-hot",
+            "text": "Coffee dates over tea dates",
+            "expectedSwipe": "right",
+            "matchMessage": "Espresso yourself! ☕"
+        },
+        {
+            "id": 5,
+            "icon": "music",
+            "text": "Dancing in the kitchen while cooking",
+            "expectedSwipe": "right",
+            "matchMessage": "Let's turn up the music! 💃"
+        },
+        {
+            "id": 6,
+            "icon": "book-open",
+            "text": "Reading books in cozy corners",
+            "expectedSwipe": "right",
+            "matchMessage": "A fellow bookworm! What's your favorite? 📚"
+        },
+        {
+            "id": 7,
+            "icon": "gamepad",
+            "text": "Video game nights until 3am",
+            "expectedSwipe": "right",
+            "matchMessage": "Game on! Winner picks dinner 🎮"
+        },
+        {
+            "id": 8,
+            "icon": "dog",
+            "text": "Stopping to pet every dog we see",
+            "expectedSwipe": "right",
+            "matchMessage": "Obviously! Dogs make everything better 🐕"
+        },
+        {
+            "id": 9,
+            "icon": "plane",
+            "text": "Dreaming about our next adventure",
+            "expectedSwipe": "right",
+            "matchMessage": "Where should we go first? ✈️"
+        },
+        {
+            "id": 10,
+            "icon": "heart",
+            "text": "Making silly faces at each other",
+            "expectedSwipe": "right",
+            "matchMessage": "You're already making me smile 😊"
+        }
+    ],
+    "conclusion": {
+        "title": "We're definitely a match!",
+        "message": "Looks like we have so much in common... Can't wait to do all of this together! 💛"
+    }
+}
