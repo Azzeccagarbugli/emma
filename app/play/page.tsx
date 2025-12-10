@@ -83,7 +83,7 @@ export default function PlayPage() {
     const cardsSwiped = cardsData.cards.length - currentIndex - 1;
 
     return (
-        <main className="min-h-screen min-h-dvh flex flex-col items-center px-4 py-6 pt-[calc(1.5rem+env(safe-area-inset-top))] pb-[calc(1.5rem+env(safe-area-inset-bottom))] relative overflow-hidden">
+        <main className="min-h-screen min-h-dvh flex flex-col items-center px-4 py-6 relative overflow-hidden">
             {/* Confetti */}
             <ConfettiTrigger trigger={showConfetti} />
 

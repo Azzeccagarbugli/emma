@@ -52,42 +52,30 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
     if (!isVisible) return null;
 
     return (
-        <>
-            {/* Full screen backdrop that extends BEYOND viewport to cover iOS status bar */}
+        <div
+            className="fixed inset-0 z-50"
+            onClick={handleBackdropClick}
+        >
+            {/* Backdrop */}
             <div
-                onClick={handleBackdropClick}
+                className="absolute inset-0 bg-black/50 backdrop-blur-sm"
                 style={{
-                    position: 'fixed',
-                    top: '-200px',
-                    left: '-200px',
-                    right: '-200px',
-                    bottom: '-200px',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    backdropFilter: 'blur(8px)',
-                    WebkitBackdropFilter: 'blur(8px)',
-                    zIndex: 50,
                     opacity: isAnimating ? 1 : 0,
                     transition: 'opacity 0.3s ease-out',
                 }}
             />
 
             {/* Sheet container */}
-            <div
-                className="fixed inset-0 z-50 p-4 pb-6 flex items-end justify-center pointer-events-none"
-                style={{
-                    paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom, 0px))',
-                }}
-            >
-                {/* Floating sheet */}
+            <div className="absolute inset-0 flex items-end justify-center p-4 pb-8">
                 <div
-                    className="relative w-full max-w-md bg-white rounded-3xl p-6 pt-4 pointer-events-auto"
+                    className="relative w-full max-w-md bg-white rounded-3xl p-6 pt-4"
                     style={{
                         transform: isAnimating ? 'translateY(0) scale(1)' : 'translateY(100%) scale(0.95)',
                         opacity: isAnimating ? 1 : 0,
                         transition: isAnimating
                             ? 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease-out'
                             : 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-out',
-                        boxShadow: '0 -4px 30px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                        boxShadow: '0 -4px 30px rgba(0, 0, 0, 0.15)',
                     }}
                     onClick={handleSheetClick}
                 >
@@ -102,7 +90,7 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
                         <FontAwesomeIcon icon={faXmark} className="w-4 h-4 text-text-muted" />
                     </button>
 
-                    {/* Content with staggered animations */}
+                    {/* Content */}
                     <div className="flex flex-col items-center text-center">
                         {/* Match badge */}
                         <div
@@ -155,6 +143,6 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

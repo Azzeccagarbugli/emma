@@ -6,7 +6,7 @@ import { faHeart, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 pt-[calc(3rem+env(safe-area-inset-top))] pb-[calc(3rem+env(safe-area-inset-bottom))] relative overflow-hidden">
+    <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-20 left-10 w-20 h-20 bg-bumble/20 rounded-full blur-xl" />
@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Top section - decorative hearts */}
-      <div className="flex gap-4 justify-center">
+      <div className="flex gap-4 justify-center pt-safe">
         <span className="text-coral/60 animate-float" style={{ animationDelay: '0s' }}>
           <FontAwesomeIcon icon={faHeart} className="w-6 h-6" />
         </span>
@@ -51,7 +51,7 @@ export default function Home() {
       </div>
 
       {/* Bottom button */}
-      <div className="w-full max-w-sm z-10">
+      <div className="w-full max-w-sm z-10 pb-safe">
         <Link
           href="/play"
           className="group w-full bg-bumble hover:bg-bumble-dark text-text-dark font-bold text-xl py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 touch-target transition-all duration-200"

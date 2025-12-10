@@ -80,7 +80,7 @@ function ConclusionContent() {
     const message = getMessage();
 
     return (
-        <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 pt-[calc(3rem+env(safe-area-inset-top))] pb-[calc(3rem+env(safe-area-inset-bottom))] relative overflow-hidden">
+        <main className="min-h-screen min-h-dvh flex flex-col items-center justify-between px-6 py-12 relative overflow-hidden">
             {/* Decorative background */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="absolute top-10 left-8 w-32 h-32 bg-bumble/20 rounded-full blur-2xl" />

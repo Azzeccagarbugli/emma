@@ -16,12 +16,6 @@
   --text-muted: #6B6B6B;
   --card-white: #FFFFFF;
   --shadow-color: rgba(0, 0, 0, 0.1);
-
-  /* Safe area insets for iOS */
-  --safe-area-inset-top: env(safe-area-inset-top, 0px);
-  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
-  --safe-area-inset-left: env(safe-area-inset-left, 0px);
-  --safe-area-inset-right: env(safe-area-inset-right, 0px);
 }
 
 @theme inline {
@@ -42,45 +36,21 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-/* Critical: Apply background to HTML for full coverage behind status bar */
 html {
   -webkit-tap-highlight-color: transparent;
-  height: 100%;
-  background: var(--cream);
+  background-color: var(--cream);
 }
 
 body {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
   color: var(--text-dark);
   font-family: "Nunito", system-ui, sans-serif;
   min-height: 100vh;
   min-height: 100dvh;
-  min-height: -webkit-fill-available;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
-  /* Remove default body background - let the fixed bg layer handle it */
-  background: transparent;
-  position: relative;
-}
-
-/* Fixed background layer that covers EVERYTHING including behind status bar */
-body::before {
-  content: '';
-  position: fixed;
-  top: -100px;
-  /* Extend well beyond top */
-  left: -100px;
-  right: -100px;
-  bottom: -100px;
-  /* Extend well beyond bottom */
-  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
-  z-index: -1;
-  pointer-events: none;
 }
 
 /* Smooth transitions for interactions */
@@ -106,7 +76,6 @@ a {
 
 /* ===== ANIMATIONS ===== */
 
-/* Float animation - smooth and gentle */
 @keyframes float {
 
   0%,
@@ -119,7 +88,6 @@ a {
   }
 }
 
-/* Pulse glow for attention-grabbing elements */
 @keyframes pulse-glow {
 
   0%,
@@ -132,7 +100,6 @@ a {
   }
 }
 
-/* Smooth fade in */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -145,7 +112,6 @@ a {
   }
 }
 
-/* Scale bounce in */
 @keyframes bounce-in {
   0% {
     transform: scale(0.3);
@@ -166,7 +132,6 @@ a {
   }
 }
 
-/* Gentle wiggle */
 @keyframes wiggle {
 
   0%,
@@ -179,7 +144,6 @@ a {
   }
 }
 
-/* Ping effect - slower and more subtle */
 @keyframes ping-slow {
   0% {
     transform: scale(1);
@@ -218,54 +182,10 @@ a {
   animation: ping-slow 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-/* Card stack styling */
-.card-stack {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.swipe-card {
-  position: absolute;
-  width: 100%;
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
 /* Touch-friendly button sizing */
 .touch-target {
   min-height: 48px;
   min-width: 48px;
-}
-
-/* Hardware acceleration for smooth animations */
-.will-change-transform {
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-}
-
-/* Smooth transitions */
-.transition-smooth {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Spring-like transition */
-.transition-spring {
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-/* Full screen overlay that covers EVERYTHING */
-.fullscreen-overlay {
-  position: fixed;
-  top: -100px;
-  left: -100px;
-  right: -100px;
-  bottom: -100px;
-  z-index: 50;
 }
 
 /* Fix for iOS touch delay */
