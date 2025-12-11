@@ -19,12 +19,12 @@ export default function Home() {
       <div className="flex flex-col items-center text-center z-10 max-w-sm">
         <div className="mb-8">
           <div className="w-24 h-24 bg-bumble rounded-full flex items-center justify-center mb-6 shadow-lg animate-pulse-glow mx-auto">
-            <span className="text-4xl">👋</span>
+            <span className="text-4xl">🦄</span>
           </div>
         </div>
 
         <h1 className="text-5xl font-black text-text-dark mb-4 tracking-tight">
-          Hey Emma!
+          Ciao Emma!
         </h1>
 
         <p className="text-xl text-text-muted font-semibold mb-2">
@@ -32,8 +32,8 @@ export default function Home() {
         </p>
 
         <p className="text-text-muted/80 text-base leading-relaxed mb-12">
-          Swipe through some cards and let&apos;s see how much we have in common!
-          <span className="inline-block ml-1">✨</span>
+          Since you told me that I wasn't able to build websites, I wanted to prove you wrong, and here it is, let's see if you can play!
+          <span className="inline-block ml-1">😎</span>
         </p>
 
         <Link

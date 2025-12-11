@@ -4,15 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import {
     faHeart,
-    faPizzaSlice,
-    faCouch,
-    faMountainSun,
-    faMugHot,
-    faMusic,
-    faBookOpen,
-    faGamepad,
-    faDog,
-    faPlane,
+    faWineGlass,
+    faDumbbell,
+    faFilm,
+    faPassport,
+    faUserSecret,
+    faPeopleGroup,
+    faCookieBite,
 } from '@fortawesome/free-solid-svg-icons';
 import type { Card } from '@/types';
 
@@ -24,15 +22,13 @@ interface SwipeCardProps {
 // Map of icon names to their definitions
 const iconMap: Record<string, IconDefinition> = {
     'heart': faHeart,
-    'pizza-slice': faPizzaSlice,
-    'couch': faCouch,
-    'mountain-sun': faMountainSun,
-    'mug-hot': faMugHot,
-    'music': faMusic,
-    'book-open': faBookOpen,
-    'gamepad': faGamepad,
-    'dog': faDog,
-    'plane': faPlane,
+    'wine-glass': faWineGlass,
+    'dumbbell': faDumbbell,
+    'film': faFilm,
+    'passport': faPassport,
+    'user-secret': faUserSecret,
+    'family': faPeopleGroup,
+    'cookie-bite': faCookieBite,
 };
 
 // Helper to get icon from string name
@@ -66,7 +62,8 @@ export default function SwipeCard({ card, isTop = false }: SwipeCardProps) {
                 )}
                 <FontAwesomeIcon
                     icon={getIcon(card.icon)}
-                    className="w-14 h-14 text-bumble relative z-10"
+                    className="text-bumble relative z-10"
+                    style={{ fontSize: '4rem' }}
                 />
             </div>
 

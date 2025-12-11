@@ -2,77 +2,56 @@
     "cards": [
         {
             "id": 1,
-            "icon": "pizza-slice",
-            "text": "Late night pizza runs at 2am",
+            "icon": "wine-glass",
+            "text": "Making an exception and drinking *actual alcohol* just for you… and immediately regretting it 🍷",
             "expectedSwipe": "right",
-            "matchMessage": "Same! I'm already hungry thinking about it 🍕"
+            "matchMessage": "Look, I still blame you for that wine + Disaronno combo. You owe me a recovery date 😤"
         },
         {
             "id": 2,
-            "icon": "couch",
-            "text": "Netflix marathons with zero guilt",
+            "icon": "dumbbell",
+            "text": "You're a personal trainer but I *still* haven’t seen you deadlift a single thing 💪",
             "expectedSwipe": "right",
-            "matchMessage": "Perfect match! What are we watching first? 🍿"
+            "matchMessage": "I need proof. Preferably in person. Preferably soon. 😏"
         },
         {
             "id": 3,
-            "icon": "mountain-sun",
-            "text": "Spontaneous road trips to nowhere",
+            "icon": "film",
+            "text": "Watching Stranger Things together even if you ‘know the director’ (sure you do, Hollywood girl) 🎬",
             "expectedSwipe": "right",
-            "matchMessage": "Adventure awaits! Pack your bags! 🚗"
+            "matchMessage": "If the director calls mid-episode, tell him he’s interrupting something important 😌"
         },
         {
             "id": 4,
-            "icon": "mug-hot",
-            "text": "Coffee dates over tea dates",
+            "icon": "passport",
+            "text": "Finding out your real name is *Marianna* and instantly realising you’re way more Italian than me 🇮🇹",
             "expectedSwipe": "right",
-            "matchMessage": "Espresso yourself! ☕"
+            "matchMessage": "Marianna??? Bro I wasn’t ready for that plot twist. Say \"ciao\" again I dare you 😮‍💨"
         },
         {
             "id": 5,
-            "icon": "music",
-            "text": "Dancing in the kitchen while cooking",
+            "icon": "user-secret",
+            "text": "You thinking I catfished you because I cut my hair and lost all my curls ✂️",
             "expectedSwipe": "right",
-            "matchMessage": "Let's turn up the music! 💃"
+            "matchMessage": "Plot twist: YOU were supposed to be the catfish, the fat woman from the memes 😏"
         },
         {
             "id": 6,
-            "icon": "book-open",
-            "text": "Reading books in cozy corners",
+            "icon": "family",
+            "text": "Meeting your dad Diego because honestly… he might be even more fun than you 🤭",
             "expectedSwipe": "right",
-            "matchMessage": "A fellow bookworm! What's your favorite? 📚"
+            "matchMessage": "Tell Diego to get ready, I'm bringing wine. (Not for me. Never again.)"
         },
         {
             "id": 7,
-            "icon": "gamepad",
-            "text": "Video game nights until 3am",
+            "icon": "cookie-bite",
+            "text": "You not liking chocolate… meaning you’ll leave me alone with ALL of it 🍫",
             "expectedSwipe": "right",
-            "matchMessage": "Game on! Winner picks dinner 🎮"
-        },
-        {
-            "id": 8,
-            "icon": "dog",
-            "text": "Stopping to pet every dog we see",
-            "expectedSwipe": "right",
-            "matchMessage": "Obviously! Dogs make everything better 🐕"
-        },
-        {
-            "id": 9,
-            "icon": "plane",
-            "text": "Dreaming about our next adventure",
-            "expectedSwipe": "right",
-            "matchMessage": "Where should we go first? ✈️"
-        },
-        {
-            "id": 10,
-            "icon": "heart",
-            "text": "Making silly faces at each other",
-            "expectedSwipe": "right",
-            "matchMessage": "You're already making me smile 😊"
+            "matchMessage": "Dangerous. We need to share or I’ll literally die of happiness and sugar 🎂"
         }
     ],
     "conclusion": {
-        "title": "We're definitely a match!",
-        "message": "Looks like we have so much in common... Can't wait to do all of this together! 💛"
+        "title": "Ok fine, we’re a match 😌",
+        "message": "Between the wine, the curls, Stranger Things, and your Italian alter-ego Marianna… I guess we’ve got unfinished business. 👀"
     }
 }

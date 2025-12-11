@@ -100,7 +100,7 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
                                 transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s',
                             }}
                         >
-                            <FontAwesomeIcon icon={faHeart} className="w-9 h-9 text-white" />
+                            <FontAwesomeIcon icon={faHeart} className="text-white" style={{ fontSize: '1.5rem' }} />
                         </div>
 
                         <h2
@@ -111,7 +111,7 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
                                 transition: 'all 0.4s ease-out 0.15s',
                             }}
                         >
-                            It&apos;s a Match! 🎉
+                            It&apos;s a Match 🎉
                         </h2>
 
                         <p
@@ -135,7 +135,7 @@ export default function BottomSheet({ isOpen, onClose, message }: BottomSheetPro
                                 transition: 'all 0.4s ease-out 0.25s, background-color 0.2s, box-shadow 0.2s',
                             }}
                         >
-                            Keep Going! 💪
+                            Keep Going 👻
                         </button>
                     </div>
                 </div>
