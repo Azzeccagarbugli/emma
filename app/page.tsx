@@ -28,7 +28,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xl text-text-muted font-semibold mb-2">
-          I made something special for you...
+          I made something for you...
         </p>
 
         <p className="text-text-muted/80 text-base leading-relaxed mb-12">

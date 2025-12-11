@@ -7,6 +7,7 @@ import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState, Suspense } from 'react';
 import confetti from 'canvas-confetti';
 import cardsData from '@/data/cards.json';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 function ConclusionContent() {
     const searchParams = useSearchParams();
@@ -65,14 +66,14 @@ function ConclusionContent() {
         } else if (matchPercentage >= 50) {
             return {
                 emoji: '✨',
-                title: 'Pretty good match!',
-                subtitle: "We've got some things in common... let's explore more!",
+                title: 'Lekker meisje',
+                subtitle: "I thought you were just a meme but you are actually cool, maybe...",
             };
         } else {
             return {
                 emoji: '💭',
                 title: 'Opposites attract?',
-                subtitle: "Maybe we can learn new things from each other!",
+                subtitle: "Oh come on you are just jealous because I'm so much better than you, pff",
             };
         }
     };
@@ -136,13 +137,14 @@ function ConclusionContent() {
                     className="w-full bg-[#1DB954] hover:bg-[#1ed760] text-white font-bold text-xl py-5 px-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 touch-target transition-all duration-200 mb-3"
                 >
                     <FontAwesomeIcon icon={faSpotify} className="w-6 h-6" />
-                    <span>Listen Now</span>
+                    <span>A lil song for you</span>
                 </a>
 
                 <Link
                     href="/"
                     className="w-full bg-white hover:bg-gray-50 text-text-muted font-semibold text-lg py-4 px-8 rounded-2xl shadow-md hover:shadow-lg transform hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2 touch-target transition-all duration-200 border border-gray-100"
                 >
+                    <FontAwesomeIcon icon={faArrowLeft} className="w-6 h-6" />
                     <span>Back to Start</span>
                 </Link>
             </div>
